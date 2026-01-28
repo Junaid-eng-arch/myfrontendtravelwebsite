@@ -1,0 +1,77 @@
+/* src/components/Middle.css */
+
+.middle-content {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* --- Card Grid Layout --- */
+.places-grid {
+    display: grid;
+    /* Create a responsive grid: 
+       Minimum width of 300px per card, maximum 3 columns */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.place-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.place-image {
+    width: 100%;
+    height: 250px; /* Fixed height for consistent cards */
+    object-fit: cover;
+    display: block;
+}
+
+.place-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.place-title {
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.view-details-button {
+    background-color: #ED478D; /* Use your brand color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.view-details-button:hover {
+    background-color: #d13a7b;
+}
+
+/* --- Loading and Error Styles --- */
+.middle-section-loading, .middle-section-error {
+    text-align: center;
+    padding: 50px;
+    color: #ED478D;
+}

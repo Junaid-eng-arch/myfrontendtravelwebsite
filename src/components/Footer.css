@@ -1,0 +1,238 @@
+/* --- 1. Global Footer Structure --- */
+.footer-container {
+    background-color: #202530; /* Dark blue/grey background */
+    color: #cccccc; /* Light grey text */
+    font-family: 'Georgia', serif; /* Use a classic serif font for the main text */
+    padding: 40px 0 15px 0; /* Padding top/bottom and sides */
+}
+
+.footer-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- 2. Grid Layout for Columns --- */
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+}
+
+.footer-column {
+    /* Base width for all columns. Adjust based on content */
+    flex: 1; 
+    min-width: 250px; 
+}
+
+/* Adjusting the column width distribution to match the image: 
+   Info column is slightly wider, others are narrower. */
+.info-column {
+    flex: 1.5; /* Takes up more space */
+}
+.links-column, .contact-column, .query-column {
+    flex: 1;
+}
+
+/* --- 3. Logo and Info Column Styling --- */
+.logo-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.footer-logo {
+    /* Styling for the logo image/component */
+    height: 40px; 
+    width: auto;
+    margin-right: 10px;
+    /* You need to ensure your logo image is included here */
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #F8F8F8; /* Whiter text for tagline */
+}
+
+.company-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    /* Style to make icons stand out (e.g., box-like appearance in the image) */
+    color: #cccccc;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.social-icon:hover {
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* --- 4. Links and Contact Column Styling --- */
+.column-title {
+    color: #F8F8F8; /* White/bright text for titles */
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif; /* Use a sans-serif for titles/headers */
+}
+
+.whatsapp-title {
+    margin-top: 30px; /* Space between Contact and WhatsApp section */
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    line-height: 2.2; /* Spacing between links */
+    display: block;
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.contact-item {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    display: flex;
+    align-items: center;
+}
+
+.contact-item .icon {
+    margin-right: 10px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+/* --- 5. Send Query Button --- */
+/* The button is positioned visually below the useful links column in the image */
+.send-query-container {
+    /* Use Grid/Flex to align the button beneath the 'Useful Links' column */
+    display: flex;
+    justify-content: flex-start; /* Start from the left */
+    /* Add margin to position it roughly below the Useful Links column */
+    margin-left: calc(250px + 30px); /* This is a rough calculation based on column widths */
+}
+
+.send-query-button {
+    background-color: transparent;
+    color: #cccccc;
+    border: 1px solid #cccccc;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    /* Ensure the button takes up the width as shown in the image */
+    width: 200px; 
+    text-align: center;
+}
+
+.send-query-button:hover {
+    background-color: #333945; /* Slightly lighter background on hover */
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* --- 6. Bottom Legal Bar --- */
+.footer-bottom {
+    margin-top: 40px;
+}
+
+.footer-separator {
+    border: 0;
+    height: 1px;
+    background-color: #444444; /* Thin, subtle separator line */
+    margin: 20px 0;
+}
+
+.footer-legal-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.85rem;
+}
+
+.legal-links {
+    display: flex;
+    gap: 15px;
+}
+
+.legal-link {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.legal-link:hover {
+    color: #ffffff;
+}
+
+.separator {
+    color: #666666;
+}
+
+.copyright-text {
+    margin: 5px 0; /* Ensures mobile layout is clean */
+}
+
+/* --- Responsive Adjustments (Optional but Recommended) --- */
+@media (max-width: 1024px) {
+    .footer-grid {
+        gap: 20px;
+        justify-content: flex-start;
+    }
+    .send-query-container {
+        /* Reset manual positioning for smaller screens */
+        margin-left: 0; 
+        justify-content: center; /* Center the button */
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        flex-direction: column;
+    }
+    .footer-column {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+    .footer-legal-bar {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}

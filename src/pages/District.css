@@ -1,0 +1,59 @@
+/*
+ * District.css
+ * Styles for the District component showcasing Kerala's regions.
+ */
+
+/* === Main Container Styles === */
+.district-container {
+    /* Set a light, cohesive background for the whole section */
+    background-color: #f0fff0; /* Very light green/off-white background */
+    padding: 40px 0;
+}
+
+/* === Card Wrapper (Flexbox Container) Styles === */
+.district-cards-wrapper {
+    /* Setup Flexbox for responsiveness and wrapping */
+    display: flex;
+    flex-wrap: wrap;
+    /* Center all cards horizontally */
+    justify-content: center; 
+    /* Spacing between cards */
+    gap: 25px;
+    padding: 0 20px;
+}
+
+/* === Individual Card Hover Effect === */
+
+/* The card class for transitions */
+.district-card {
+    /* Ensures the lift and shadow changes are smooth */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    /* Ensures the box-shadow property set in the inline style is the starting point */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); 
+    /* You may need to add border-radius and background here if you remove them from JSX */
+}
+
+/* The actual lift effect on hover */
+.district-card:hover {
+    /* Lifts the card up by 5 pixels */
+    transform: translateY(-5px); 
+    /* Strengthens the shadow on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+}
+
+/* === Button Hover Effect === */
+
+/* Target the Bootstrap Button element inside the card */
+.district-card .btn {
+    /* Ensures the background color change is smooth */
+    transition: background-color 0.3s ease; 
+    /* Set cursor to pointer for clarity */
+    cursor: pointer;
+}
+
+/* Darker green background on button hover */
+.district-card .btn:hover {
+    /* Use a darker green color */
+    background-color: #1b5e20 !important; 
+    /* !important ensures this overrides Bootstrap's default hover styles */
+}
