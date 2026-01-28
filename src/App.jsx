@@ -291,7 +291,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components
-import HeroPage from "./components/HeroPage.jsx";
+import HeroPage from "./components/HeroPage";  
 import Middlesection from "./components/Middlesection.jsx";
 import Card from "./components/Card.jsx";
 import CampingBookingForm from "./components/CampingBookingForm.jsx";
