@@ -291,7 +291,6 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // Components
-// import HeroPage from "./components/HeroPage";
 
 import Middlesection from "./components/Middlesection.jsx";
 import Card from "./components/Card.jsx";
@@ -324,6 +323,7 @@ import WildHotel from "./pages/WildHotel.jsx";
 import TourPackege from "./pages/TourPackege.jsx";
 import TourPackageDetails from "./pages/TourPackageDetails.jsx";
 import Notifications from "./pages/Notifications.jsx";
+import HeroPage from "./components/Heropage.jsx";
 
 const App = () => {
   return (
@@ -334,7 +334,7 @@ const App = () => {
           path="/"
           element={
             <>
-              {/* <HeroPage/> */}
+             <HeroPage/>
               <Explore />
               <District />
               <TourPackege />
